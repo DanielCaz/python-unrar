@@ -36,9 +36,8 @@ class MyGUI:
         ), title='Select File', filetypes=(('RAR Files', '*.rar'), ('All Files', '*.*')))
 
         if file_path:
-
             out_path = patoolib.extract_archive(
-                file_path, outdir=file_path[:-4], verbosity=-1, interactive=False)
+                file_path, outdir=file_path[:-4], interactive=False, verbosity=1)
 
             tkinter.messagebox.showinfo(
                 'Extracted Files', 'Files extracted to: ' + out_path)
